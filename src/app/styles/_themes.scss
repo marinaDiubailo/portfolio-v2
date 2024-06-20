@@ -1,0 +1,13 @@
+:root {
+  --color-bg-primary: var(--color-light-200);
+  --gradient: var(--light-gradient);
+  --color-text-primary: var(--color-purple-800);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: var(--color-dark-800);
+    --gradient: var(--dark-gradient);
+    --color-text-primary: var(--color-light-200);
+  }
+}

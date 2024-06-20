@@ -1,2 +1,26 @@
 :root {
+  --light-gradient: repeating-linear-gradient(
+    100deg,
+    var(--color-light-100) 0%,
+    var(--color-light-100) 7%,
+    var(--color-light-100) 10%,
+    var(--transparent) 12%,
+    var(--color-light-100) 16%
+  );
+  --dark-gradient: repeating-linear-gradient(
+    100deg,
+    var(--color-dark-900) 0%,
+    var(--color-dark-900) 7%,
+    var(--color-dark-900) 10%,
+    var(--transparent) 12%,
+    var(--color-dark-900) 16%
+  );
+  --aurora: repeating-linear-gradient(
+    100deg,
+    var(--color-blue-500) 10%,
+    var(--color-purple-300) 15%,
+    var(--color-blue-300) 20%,
+    var(--color-purple-200) 25%,
+    var(--color-blue-400) 30%
+  );
 }

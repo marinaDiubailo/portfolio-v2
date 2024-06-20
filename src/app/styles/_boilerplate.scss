@@ -18,8 +18,8 @@ body {
 
 body {
   min-width: 360px;
-  color: white;
-  background: black;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
 }
 
 a {

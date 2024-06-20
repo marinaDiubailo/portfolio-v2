@@ -1,0 +1,67 @@
+.root {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  position: absolute;
+  inset: 0px;
+  overflow: hidden;
+}
+
+.gradient {
+  background-image: var(--gradient), var(--aurora);
+  background-size: 300%, 200%;
+  background-position:
+    50% 50%,
+    50% 50%;
+  filter: blur(10px) invert(100%);
+  pointer-events: none;
+  position: absolute;
+  inset: -10px;
+  will-change: transform;
+  opacity: 0.5;
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-image: var(--gradient), var(--aurora);
+    background-size: 200%, 100%;
+    background-attachment: fixed;
+    mix-blend-mode: difference;
+    animation: aurora 60s linear infinite;
+  }
+}
+
+.radial {
+  mask-image: radial-gradient(ellipse at 100% 0%, black 10%, var(--transparent) 70%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient {
+    filter: invert(0);
+
+    &:after {
+      background-image: var(--gradient), var(--aurora);
+    }
+  }
+}
+
+@keyframes aurora {
+  from {
+    background-position:
+      50% 50%,
+      50% 50%;
+  }
+
+  to {
+    background-position:
+      350% 50%,
+      350% 50%;
+  }
+}
