@@ -30,7 +30,7 @@
     content: "";
     position: absolute;
     inset: 0px;
-    background-image: var(--gradient), var(--aurora);
+    background-image: var(--light-gradient), var(--aurora);
     background-size: 200%, 100%;
     background-attachment: fixed;
     mix-blend-mode: difference;
@@ -42,12 +42,12 @@
   mask-image: radial-gradient(ellipse at 100% 0%, black 10%, var(--transparent) 70%);
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
   .gradient {
     filter: invert(0);
 
     &:after {
-      background-image: var(--gradient), var(--aurora);
+      background-image: var(--dark-gradient), var(--aurora);
     }
   }
 }
