@@ -1,5 +1,43 @@
 .root {
-  padding: 9rem 2.5rem 5rem;
+  padding: 9rem 0 9rem;
   width: 100%;
-  min-height: 100vh;
+
+  margin-bottom: 64px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.greetings {
+  font-size: var(--font-size-m);
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.title {
+  font-size: inherit;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .greetings {
+    font-size: var(--font-size-l);
+    letter-spacing: 0.05em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .greetings {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .button {
+    width: 100%;
+  }
 }

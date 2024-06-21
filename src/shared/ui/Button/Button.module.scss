@@ -1,0 +1,64 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1px;
+  font-weight: 500;
+  position: relative;
+  height: 3rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(24, 24, 27, 0.205);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-outline);
+    outline-offset: 2px;
+  }
+}
+
+.offset {
+  position: absolute;
+  inset: -1000%;
+  background-image: conic-gradient(
+    from 90deg at 50% 50%,
+    var(--color-purple-400) 0%,
+    var(--color-blue-600) 50%,
+    var(--color-purple-400) 100%
+  );
+  animation: spin 2s linear infinite;
+}
+
+.wrapper {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-primary);
+
+  padding: 0.25rem 0.75rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-s);
+  line-height: 1.25rem;
+  backdrop-filter: blur(64px);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 15rem;
+  }
+}

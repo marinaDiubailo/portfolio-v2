@@ -2,10 +2,16 @@
   --color-bg-primary: var(--color-light-200);
   --gradient: var(--light-gradient);
   --color-text-primary: var(--color-purple-800);
+  --color-accent: var(--color-purple-500);
+  --scroll-track: var(--color-purple-400);
+  --scroll-thumb: var(--color-purple-500);
 }
 
 [data-theme="dark"] {
   --color-bg-primary: var(--color-dark-800);
   --gradient: var(--dark-gradient);
   --color-text-primary: var(--color-light-200);
+  --color-accent: var(--color-purple-400);
+  --scroll-track: var(--color-dark-600);
+  --scroll-thumb: var(--color-purple-700);
 }

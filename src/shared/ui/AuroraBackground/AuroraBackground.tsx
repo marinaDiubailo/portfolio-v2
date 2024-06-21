@@ -1,21 +1,17 @@
 'use client';
 import clsx from 'clsx';
-import type { ReactNode, ComponentProps } from 'react';
+import type { ReactNode, ComponentProps, FC } from 'react';
 import s from './AuroraBackground.module.scss';
 
-type AuroraBackgroundProps = {
+type Props = {
   children: ReactNode;
   showRadialGradient?: boolean;
 } & ComponentProps<'div'>;
 
-export const AuroraBackground = ({
-  className,
-  children,
-  showRadialGradient = true,
-  ...props
-}: AuroraBackgroundProps) => {
+export const AuroraBackground: FC<Props> = (props) => {
+  const { className, children, showRadialGradient = true, ...rest } = props;
   return (
-    <div className={clsx(s.root, className)} {...props}>
+    <div className={clsx(s.root, className)} {...rest}>
       <div className={s.wrapper}>
         <div className={clsx(s.gradient, showRadialGradient && s.radial)}></div>
       </div>

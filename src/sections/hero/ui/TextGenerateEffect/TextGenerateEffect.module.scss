@@ -1,0 +1,32 @@
+.root {
+  font-weight: var(--font-weight-bold);
+  font-size: 2rem;
+  line-height: 1.375;
+  letter-spacing: 0.025em;
+
+  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  flex-shrink: 1;
+}
+
+.text {
+  opacity: 0;
+  color: var(--color-text-primary);
+
+  &.active {
+    color: var(--color-accent);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .root {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .root {
+    font-size: 2.5rem;
+  }
+}
